@@ -4,14 +4,10 @@ import smtplib
 
 import requests
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
 
-load_dotenv()
-
-
-GMAIL_ADDR = os.getenv("Gmail_Addy")
-GMAIL_APP_PW = os.getenv("Gmail_App_PW")
-DEST_ADDR = os.getenv("Dest_email")
+GMAIL_ADDR = os.environ["GMAIL_ADDR"]
+GMAIL_APP_PW = os.environ["GMAIL_APP_PW"]
+DEST_ADDR = os.getenv("DEST_ADDR")
 
 
 URL= "https://www.amazon.com/dp/B0F13B7XQB/ref=sspa_dk_detail_1?psc=1&pd_rd_i=B0F13B7XQB&pd_rd_w=KbNa0&content-id=amzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_p=3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_r=WC4W8J2HQGJC5V5BD6NV&pd_rd_wg=8g4Yj&pd_rd_r=e7aae727-0fcc-4a88-8d2c-c7e62aa5e321&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM"
